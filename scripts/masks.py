@@ -5,10 +5,11 @@ from omero.rtypes import rdouble, rint
 from omero.model import RoiI, MaskI
 from omero.gateway import ColorHolder
 import numpy as np
-
+from skimage.io import imread
 
 dry_run = False
 
+MASK_PATH = "/uod/idr/filesets/idr0155-fu-alphasynuclein/microglia_oligomer_processed/<PATIENT>/cellOligomerPosition_<IMAGE_NAME>"
 
 def get_images(conn):
     """
@@ -25,25 +26,21 @@ def get_images(conn):
 
 
 def get_mask_image(conn, dataset, image):
-    mask_dataset_name = dataset.getName().replace("-", "_processed-")
-    mask_image_name = f"cellOligomerPosition_{image.getName()}"
-    mask_dataset = conn.getObject("Dataset", attributes={"name": mask_dataset_name})
-    for mask_image in mask_dataset.listChildren():
-        if mask_image.getName() == mask_image_name:
-            return mask_image
+    patient = ds.getName().replace("microglia_oligomer-", "")
+    path = MASK_PATH.replace("<PATIENT>", patient)
+    path = path.replace("<IMAGE_NAME>", image.getName())
+    try:
+        return imread(path)
+    except Exception as e:
+        print(f"Can't read {path}: {e}")
     return None
 
 
 def create_roi(mask_img):
-    zct_list = []
-    for t in range(0, mask_img.getSizeT()):
-        zct_list.append((0, 0, t))
-    planes = mask_img.getPrimaryPixels().getPlanes(zct_list)
     roi = omero.model.RoiI()
-    for t, plane in enumerate(planes):
+    for t in range(0, mask_img.shape[0]):
         mask = MaskI()
-        mask.setBytes(np.packbits(np.asarray(plane, dtype=int)))
-        #mask.setBytes(plane)
+        mask.setBytes(np.packbits(np.asarray(mask_img[t], dtype=int)))
         mask.setWidth(rdouble(1200))
         mask.setHeight(rdouble(1200))
         mask.setX(rdouble(0))
@@ -52,9 +49,7 @@ def create_roi(mask_img):
         ch = ColorHolder.fromRGBA(255, 255, 0, 128)
         mask.setFillColor(rint(ch.getInt()))
         roi.addShape(mask)
-    if roi.sizeOfShapes() > 0:
-        return roi
-    return None
+    return roi
 
 
 def save_roi(conn, img, roi):
@@ -86,7 +81,7 @@ with omero.cli.cli_login() as c:
             delete_rois(conn, img)
 
         mask_image = get_mask_image(conn, ds, img)
-        if not mask_image:
+        if mask_image is None:
             print(f"No mask image found for {ds.getName()}/{img.getName()} !")
             continue
 
