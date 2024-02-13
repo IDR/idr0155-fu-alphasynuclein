@@ -27,6 +27,7 @@ def get_images(conn):
 
 def get_mask_image(conn, dataset, image):
     patient = ds.getName().replace("microglia_oligomer-", "")
+    patient = patient.replace("neuron_oligomer-", "")
     path = MASK_PATH.replace("<PATIENT>", patient)
     path = path.replace("<IMAGE_NAME>", image.getName())
     try:
