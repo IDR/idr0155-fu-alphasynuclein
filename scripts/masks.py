@@ -7,6 +7,23 @@ from omero.gateway import ColorHolder
 import numpy as np
 from skimage.io import imread
 
+"""
+This script has a lot of dependencies, best create a micromamba env for it:
+
+# install micromamba
+"${SHELL}" <(curl -L micro.mamba.pm/install.sh)
+
+# add alias
+echo "alias mm=micromamba" >> ~/.bashrc
+source ~/.bashrc
+
+# create env and install stuff
+mm env create -n cli python=3.10
+mm activate cli
+mm install omero-py
+pip install ome_model scikit-image omero-rois
+"""
+
 dry_run = False
 
 MASK_PATH = "/uod/idr/filesets/idr0155-fu-alphasynuclein/microglia_oligomer_processed/<PATIENT>/cellOligomerPosition_<IMAGE_NAME>"
