@@ -1,0 +1,14 @@
+---
+channels:
+    1:
+        active: true
+        color: '808080'
+        end: 500.0
+        label: neuron
+        max: 4095.0
+        min: 87.0
+        start: 85.0
+greyscale: true
+t: 1
+version: 2
+z: 1

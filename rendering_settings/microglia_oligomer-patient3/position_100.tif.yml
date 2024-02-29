@@ -1,0 +1,14 @@
+---
+channels:
+    1:
+        active: true
+        color: '808080'
+        end: 350.0
+        label: microglia
+        max: 4095.0
+        min: 86.0
+        start: 85.0
+greyscale: true
+t: 1
+version: 2
+z: 1
