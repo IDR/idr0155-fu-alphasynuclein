@@ -1,0 +1,7 @@
+﻿Experimental Condition [Antibody1]_Experimental Condition [Antibody2],Experimental Condition [patientID],NumberOfImages,NumberOfSpots,IntensityOfSpots,ColocalizationLikelihoodToCell
+IBA1_anti-phosphorylated-alpha-synuclein,patient1,900,1354,850,1.145745699
+IBA1_anti-phosphorylated-alpha-synuclein,patient2,900,723,439,0.975822326
+IBA1_anti-phosphorylated-alpha-synuclein,patient3,900,1146,1372,0.942688181
+MAP2_anti-phosphorylated-alpha-synuclein,patient1,900,1369,820,1.536618769
+MAP2_anti-phosphorylated-alpha-synuclein,patient2,900,1457,912,1.324994549
+MAP2_anti-phosphorylated-alpha-synuclein,patient3,900,1313,867,1.514462608
