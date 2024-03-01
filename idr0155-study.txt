@@ -1,0 +1,102 @@
+# FILL IN AS MUCH INFORMATION AS YOU CAN.  HINTS HAVE BEEN PUT IN SOME FIELDS AFTER THE HASH # SYMBOL. REPLACE THE HINT WITH TEXT WHERE APPROPRIATE.
+# STUDY DESCRIPTION SECTION				
+# Section with generic information about the study including title, description, publication details (if applicable) and contact details				
+				
+Comment[IDR Study Accession]	idr0155			
+Study Title	A new method for reliably detecting single fluorescent puncta in structured backgrounds			
+Study Type	protein localization			
+Study Type Term Source REF	EFO			
+Study Type Term Accession	GO_0008104			
+Study Description	Super-resolution and single-molecule microscopy are increasingly being applied to complex biological systems. While this can lead greater insight, it also means data analysis becomes more complex: fluorescent puncta must reliably and efficiently be detected in the low signal, high noise, heterogeneous background environments of cells and tissue. We present a bioimaging-segmentation method that accomplishes this. It detects features over a broad range of spatial scales: from single proteins to complex cell phenotypes. Our method outperforms the state-of-the-art in both precision and speed, using image gradients to separate Gaussian-shaped objects from background features. We demonstrate that this approach both works robustly on simple test systems, and that it enables us to extract previously unseen correlations between Parkinson’s Disease-relevant $\alpha$-synuclein oligomers and multiple different cells types in the human brain. This sensitive, computationally efficient approach will enable fluorescent puncta and cellular features to be distinguished in cellular and tissue environments with a sensitivity down to the level of the single protein.			
+Study Key Words	Imaging	Alpha-Synuclein	Methods			
+Study Organism	Homo sapiens			
+Study Organism Term Source REF	NCBITaxon			
+Study Organism Term Accession	9606			
+Study Experiments Number	1			
+Study External URL	
+Study BioImage Archive Accession			
+Study Public Release Date	2024-03-05			
+				
+# Study Publication				
+Study PubMed ID				
+Study Publication Title	RASP: Optimal single puncta detection in complex cellular backgrounds			
+Study Author List	Fu B, Brock E, Andrews R, Breiter J, Tian R, Toomey C, Lachica J, Lashley T, Ryten M, Wood N, Vendruscolo M, Gandhi S, Weiss LE, Beckwith JS, Lee SF		
+Study PMC ID				
+Study DOI				
+				
+# Study Contacts				
+Study Person Last Name	Fu	Lee			
+Study Person First Name	Bin	Steven		
+Study Person Email	bf341@cam.ac.uk	sl591@cam.ac.uk			
+Study Person Address	Yusuf Hamied Department of Chemistry, Lensfield Road, Cambridge, CB2 1EW, UK	Yusuf Hamied Department of Chemistry, Lensfield Road, Cambridge, CB2 1EW, UK			
+Study Person ORCID	0000-0002-8816-2906	0000-0003-4492-5139			
+Study Person Roles	First Author	Principal Investigator			
+				
+# Study License and Data DOI				
+Study License	CC BY 4.0		
+Study License URL	https://creativecommons.org/licenses/by/4.0/			
+Study Copyright	Fu at al			
+Study Data Publisher	University of Dundee			
+Study Data DOI	https://doi.org/10.17867/10000195			
+				
+Term Source Name	NCBITaxon	EFO	CMPO	FBbi
+Term Source URI	http://purl.obolibrary.org/obo/	http://www.ebi.ac.uk/efo/	http://www.ebi.ac.uk/cmpo/	http://purl.obolibrary.org/obo/
+				
+				
+# EXPERIMENT SECTION				
+# Experiment Section containing all information relative to each experiment in the study including materials used, protocols names and description, phenotype names and description. For multiple experiments this section should be repeated.  Copy and paste the whole section below and fill out for the next experiment			
+				
+Experiment Number	1			
+Comment[IDR Experiment Name]	idr0155-fu-alphasynuclein/experimentA
+Experiment Sample Type	tissue			
+Experiment Description	We took 5400 field of views from three Parkinson's disease (PD) cases in the anterior cingulate gyrus for microglia and neuron markers respectively, covering dimensions of 4mm x 4mm x 13µm per patient. Cells were stained in 488nm channel while alpha-synuclein protein was labelled in 561nm channel. The colocalization study was performed based on the locations of detected cells and alpha-synucleins.  			
+Experiment Size	5D Images: 5400	Average Image Dimension (XYZCT): XYZC	Total Tb: 0.72Tb
+Experiment Example Images			
+Experiment Imaging Method	spinning disk confocal microscopy			
+Experiment Imaging Method Term Source REF	Fbbi			
+Experiment Imaging Method Term Accession	FBbi_00000253			
+Experiment Organism				
+Experiment Organism Term Source REF	NCBITaxon			
+Experiment Organism Term Accession				
+Experiment Comments				
+				
+# assay files				
+Experiment Assay File	idr0155-experimentA-annotation			
+Experiment Assay File Format	tab-delimited text			
+Assay Experimental Conditions			
+Assay Experimental Conditions Term Source REF				
+Assay Experimental Conditions Term Accession				
+Quality Control Description		
+				
+# Protocols				
+Protocol Name	treatment protocol	image acquisition and feature extraction protocol	data analysis protocol	
+Protocol Type	treatment protocol	image acquisition and feature extraction protocol	data analysis protocol	
+Protocol Type Term Source REF	EFO			
+Protocol Type Term Accession	EFO_0003969			
+Protocol Description	Tissue sections were incubated with primary antibodies; anti-phosphorated alpha-synuclein (ab184674, 1:500; ab59264, 1:200) ; Microtubule-Associated Protein 2 (ab254143, 1:500); ionized calcium-binding adapter molecule 1 (Wako – 019-19741, 1:1000) for 1h at room temperature. The sections were then washed three times for five minutes in PBS followed by the corresponding AlexaFluor secondary antibodies (anti-mouse 568, anti-rabbit 568, anti-mouse 488, anti-rabbit 488 all at 1:200) for an additional hour at room temperature in the dark. Sections were then washed three times for five minutes again in PBS and incubated in Sudan Black (0.1% for 10 minutes). Removal of Sudan Black occurred with three washes in 30% ethanol.	Images were taken on a spinning disk confocal microscope (3i intelligent imaging) with  a 200mW, 488nm laser (LuxX) and a 150mW, 561nm laser (OBIS). The objective lens was a Zeiss oil immersion objective (Alpha Plan-Apochromat 100x/1.46\,NA Oil TIRF Objective, M27). The microscope was controlled using a PC (Dell-Acquisition Workstation 310R) and SlideBook software produced by the manufacturer (3i intelligent imaging). two sCMOS cameras (Prime 95B, Teledyne Photometrics) was used for the image acquistion in two colour channels seperately (488nm for cells and 561nm for alpha-synuclein aggregates). The analysis software was a self-written code that was designed for feature detection over structured backgrounds.	We analyzed the number of diffraction-limited alpha-synuclein per FoV, sum intensit per diffraction-limited alpha-synuclein per FoV and also their relationship to the cell position.
+				
+# Phenotypes				
+Phenotype Name				
+Phenotype Description				
+Phenotype Score Type				
+Phenotype Term Source REF	CMPO			
+Phenotype Term Name				
+Phenotype Term Accession 	
+				
+				
+# Feature Level Data Files (give individual file details unless there is one file per well)				
+Feature Level Data File Name				
+Feature Level Data File Format				
+Feature Level Data File Description				
+Feature Level Data Column Name			
+Feature Level Data Column Description				
+				
+#  Processed Data Files 				
+Processed Data File Name	idr0155-experimentA-processed			
+Processed Data File Format	tab-delimited text			
+Processed Data File Description	This file contains information summarizing the averaged number of diffraction-limited alpha-synuclein per patient, the averaged sum intensity per diffraction-limited alpha-synuclein per patient, and the averaged colocalization likelihood between cell and diffraction-limited alpha-synuclein per patient		
+Processed Data Column Name	Experimental Condition [Antibody1]_Experimental Condition [Antibody2]	Experimental Condition [patientID]	NumberOfImages	NumberOfSpots	IntensityOfSpots	ColocalizationLikelihoodToCell		
+Processed Data Column Type	experimental condition	experimental condition	data	data	data	data				
+Processed Data Column Annotation Level	experimental condition	experimental condition	image	protein	protein	protein			
+Processed Data Column Description	The antibody used for labelling the cell and labelling the alpha-synuclein	which patient the data comes from	number of images taken per patient	Averaged number of diffraction-limited alpha-synuclein detected for each patient	Averaged sum intensity for each diffraction-limited alpha-synuclein for each patient	likelihood to be inside the cell (1 means no correlation, <1 means not likely to be found within cell, >1 means likely to be found within cell)
+Processed Data Column Link To Assay File	Experimental Condition [Antibody1]_Experimental Condition [Antibody2]					
