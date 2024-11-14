@@ -59,7 +59,7 @@ columns:
       namespace: openmicroscopy.org/mapr/antibody
       columns:
         - name: Experimental Condition [Antibody 1]
-          clientname: Antibody
+          clientname: Antibody Name
           include: true
           omitempty: true
         - name: Antibody Identifier 1
@@ -75,7 +75,7 @@ columns:
       namespace: openmicroscopy.org/mapr/antibody
       columns:
         - name: Experimental Condition [Antibody 2]
-          clientname: Antibody
+          clientname: Antibody Name
           include: true
           omitempty: true
         - name: Antibody Identifier 2
@@ -91,7 +91,7 @@ columns:
       namespace: openmicroscopy.org/mapr/antibody/supplementary
       columns:
         - name: Experimental Condition [Antibody 1]
-          clientname: Antibody
+          clientname: Antibody Name
           include: yes
           omitempty: no
         - name: Antibody Dilution 1
@@ -103,7 +103,7 @@ columns:
       namespace: openmicroscopy.org/mapr/antibody/supplementary
       columns:
         - name: Experimental Condition [Antibody 2]
-          clientname: Antibody
+          clientname: Antibody Name
           include: yes
           omitempty: no
         - name: Antibody Dilution 2
@@ -120,4 +120,5 @@ advanced:
         - Organism
     - namespace: openmicroscopy.org/mapr/antibody
       keys:
+        - Antibody Name
         - Antibody Identifier
